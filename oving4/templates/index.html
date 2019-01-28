@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/index.css" />
+    <meta charset="UTF-8">
+    <title>Registrer nyhet</title>
+</head>
+<body>
+    <div id="root">
+        <h1>Registrer en ny nyhet</h1>
+        <form action="{{url_for('post_form')}}" method="post">
+            <label>Overskrift som nyheten skal ha:
+                <input type="text" name="title" placeholder="title" maxlength="250"/>
+            </label>
+            <label>Skriv inn selve nyheten:
+                <textarea name="content" placeholder="text" maxlength="1000"></textarea>
+            </label>
+            <label>Publisert av:
+                <select name="publisher">
+                    {% for option in users %}
+                    <option value={{option}}>{{option}}</option>
+                    {% endfor %}
+                </select>
+            </label>
+            <input value="Registrer nyheten" type="submit" />
+        </form>
+    </div>
+</body>
+</html>

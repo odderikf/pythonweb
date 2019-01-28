@@ -1,0 +1,32 @@
+
+@media (min-width: 500px) {
+    #root{
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+
+@media (max-width: 500px) {
+    #root{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100em;
+}
+
+form label{
+    display: flex;
+    flex-direction: column;
+}
+
+form > input{
+    margin-top: 1em;
+}
